@@ -4,8 +4,8 @@ A low-power three-phase sine source. An Arduino Nano generates three sine-modula
 
 This repository contains the **hardware**: the circuit, the PCB and the simulation. The firmware is not mine. It is the open-source sketch from [cmasenas/3-Phase-Sine-Arduino](https://github.com/cmasenas/3-Phase-Sine-Arduino), see [Firmware](#firmware).
 
-<!-- Add a photo of the finished PCB here -->
-<!-- ![PCB](docs/pcb.jpg) -->
+<img width="1280" height="960" alt="Testing With NANO" src="https://github.com/user-attachments/assets/9e1c6b6e-d1c5-41d0-b277-316bc0d4d228" />
+
 
 ---
 
@@ -52,6 +52,8 @@ delta = 2^24 * f / 122.549        (122.549 = 31372.5 / 256)
 - All three phases must be connected and powered together. A single phase alone has no return path.
 - Keep the load resistance above about 50 ohm per phase. The LM386 is not meant for low-impedance loads, and an output short is not something to rely on its protection for.
 - Measuring: every output sits at about 6 V DC, so use AC coupling on the scope, or measure between two outputs (channel A minus channel B).
+- 
+<img width="1919" height="1028" alt="Simulation Output" src="https://github.com/user-attachments/assets/52f9ccf8-900c-4212-8fe2-96a340e68114" />
 
 ---
 
@@ -85,6 +87,9 @@ The real LM386 may swing slightly less than the Proteus model. If the sine shows
 | C bypass | 10 uF, 16 V+ | LM386 pin 7 to GND, + on pin 7 |
 | C decoupling | 100 uF, 25 V + 100 nF | LM386 pin 6 to GND, close to the chip |
 | Zobel | 10 ohm + 47 nF, 16 V+ | LM386 pin 5 through 10 ohm and 47 nF to GND |
+
+<img width="1280" height="960" alt="Altium To Reality" src="https://github.com/user-attachments/assets/a2f665b2-b3e2-4398-8dc1-2fec9d052922" />
+
 
 **Shared**
 
@@ -188,14 +193,6 @@ Files are in `simulation/` (adjust the path).
 
 ---
 
-## Status
-
-- [x] Full circuit simulated in Proteus
-- [x] PCB designed
-- [ ] LM386 stage verified on the PCB (update this when tested)
-- [ ] Scope captures added to `docs/`
-
----
 
 ## Credits
 
