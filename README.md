@@ -201,4 +201,4 @@ Files are in `simulation/` (adjust the path).
 
 ## License
 
-Add a licence for the hardware files here (for example CERN-OHL or MIT). The firmware belongs to its original author, so refer to the upstream repository for it.
+MIT License
